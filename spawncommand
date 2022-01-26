@@ -1,0 +1,28 @@
+####################################################################
+###                                                              ###
+###   THESE COMMANDS ARE PROPERTY OF SPLIXEY AND FOR YOUR USE!   ###
+###                                                              ###
+####################################################################
+
+# /spawn & /setspawn
+
+command /setspawn:
+  permission: op
+  trigger:
+    set {spawn} to location of block at location of player
+    send "&6 Set SpawnWarp to &c%{spawn}%&6." to player
+
+command /spawn:
+  # No permission needed
+  trigger:
+
+    # if no teleporting message:
+    teleport player to {spawn}
+
+    # if teleporting message:
+
+    send "&6Teleporting...do not move for &c5&r&6 seconds."
+    wait 5 seconds
+    teleport player to {spawn}
+
+# Disclaimer: Use one or the other, just copy and paste the text underneith the "# if ..."

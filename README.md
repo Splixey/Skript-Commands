@@ -1,2 +1,2 @@
-# Skript-Commands
-Needing some help with your skripting minecraft plugin adventures?!? Or maybe needing some templates?
+Hello Minecraft Administrators! 
+- Currently I am working on this full "SKRIPT" command repository. 

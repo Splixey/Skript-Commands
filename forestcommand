@@ -1,0 +1,28 @@
+####################################################################
+###                                                              ###
+###   THESE COMMANDS ARE PROPERTY OF SPLIXEY AND FOR YOUR USE!   ###
+###                                                              ###
+####################################################################
+
+# /forest & /setforest
+
+command /setforest:
+  permission: op
+  trigger: 
+    set {forest} to location of block at location of player
+    send "&6Set ForestWarp to &c%{forest}%&6." to player
+
+command /forest:
+  trigger:
+
+    # if no teleport message
+
+    teleport player to {forest}
+
+    # if teleport message
+
+    send "&6Teleporting...do not move for &c5&6 seconds." to player
+    wait 5 seconds
+    teleport player to {forest}
+
+# Disclaimer: Use one or the other, just copy and paste the text underneith the "# if ..."
